@@ -105,7 +105,7 @@ print(f'\nTARGET HIT: {angle} | {magnitude} | {current}')
 res = sim(angle, magnitude, params, dt)
 s, v, a, t, s_list, v_list, a_list = res
 
-# Plot position graph with vertical targetline
+# Plot position graph with vertical target line
 plt.axis = 'equal'
 plt.title = 'Yeet'
 plt.xlabel = '$x$ / m'
