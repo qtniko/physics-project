@@ -106,10 +106,10 @@ res = sim(angle, magnitude, params, dt)
 s, v, a, t, s_list, v_list, a_list = res
 
 # Plot position graph with vertical target line
-plt.axis = 'equal'
-plt.title = 'Yeet'
-plt.xlabel = '$x$ / m'
-plt.ylabel = '$y$ / m'
+plt.axis('equal')
+plt.title('Yeet')
+plt.xlabel('$x$ / m')
+plt.ylabel('$y$ / m')
 plt.grid(True)
 plt.axvline(target, color='red')
 plt.plot(s_list[:,0], s_list[:,1])
