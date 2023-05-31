@@ -27,7 +27,7 @@ def sim(angle, magnitude, params, dt=0.01, showplot=False):
     
     # Rotate start velocity vector (complex numbers go brr)
     P = complex(magnitude, 0)                           # Scaled
-    Q = P * np.exp(np.radians(angle)*complex(0, 1))     # Rotated
+    Q = P * np.exp(complex(0, np.radians(angle)))       # Rotated
     v = np.array([np.real(Q), np.imag(Q)], dtype=float) # Vectorized
 
     # Initiation
