@@ -8,7 +8,7 @@ def lerp(a: float, b: float, t: float):
     return (1 - t) * a + b * t
 
 # Parameters
-target = 333                                            # Target x value
+target = 2400                                            # Target x value
 magnitude = 200                                         # Start velocity
 params=[32, 0.1, 0.47, 1.293, np.array([0., -9.81])]    # Mass, radius, drag, air density, graivty
 tolerance = 0.0001                                      # Distance tolerance
@@ -54,6 +54,7 @@ print()
 # Check if target is within reach
 if target > dists[-1][1]:
     print(f'Cannot launch {target} meters! (max: {round(dists[-1][1])})')
+    print(dists[-1])
     sys.exit()
 
 A1 = dists[-2] # Angle closest to target (left)
@@ -105,11 +106,11 @@ print(f'\nTARGET HIT: {angle} | {magnitude} | {current}')
 res = sim(angle, magnitude, params, dt)
 s, v, a, t, s_list, v_list, a_list = res
 
-# Plot position graph with vertical target line
-plt.axis('equal')
-plt.title('Yeet')
-plt.xlabel('$x$ / m')
-plt.ylabel('$y$ / m')
+# Plot position graph with vertical targetline
+plt.axis = 'equal'
+plt.title = 'Yeet'
+plt.xlabel = '$x$ / m'
+plt.ylabel = '$y$ / m'
 plt.grid(True)
 plt.axvline(target, color='red')
 plt.plot(s_list[:,0], s_list[:,1])
