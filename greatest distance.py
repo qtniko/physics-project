@@ -5,7 +5,9 @@ from simulation import sim
 def lerp(a: float, b: float, t: float):
     return (1 - t) * a + b * t
 
+
 angles = np.linspace(0, 90, 181)[::-1]  # Array of angles
+print(angles)
 magnitude = 200                         # Magnitude (v0)
 
 # mass, radius, drag, air density, gravity
