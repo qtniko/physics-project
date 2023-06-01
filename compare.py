@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 
 # Plot and show data
 def display(data):
-    plt.axis('equal')
-    plt.title('Yeet')
-    plt.xlabel('$x$ / m')
-    plt.ylabel('$y$ / m')
+    plt.axis = 'equal'
+    plt.title = 'Yeet'
+    plt.xlabel = '$x$ / m'
+    plt.ylabel = '$y$ / m'
     plt.grid(True)
     for tpl in data:
         s, v, a, t, s_list, v_list, a_list = tpl
